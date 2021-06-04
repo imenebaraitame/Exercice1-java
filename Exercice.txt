@@ -1,0 +1,56 @@
+Exercice 5 : Soit un ensemble d’étudiants. Ils sont caractérisés par les informations suivantes : Durée 2H
+• nom,
+• 4 notes (dites « universitaires » que vous pouvez mettre sous forme de tableau)
+1) Définissez la classe Etudiant, en la dotant des propriétés précédentes et des 3 méthodes :
+• Un constructeur d’objets « etudiant »
+• Une méthode qui calcule la moyenne de leurs notes et retourne cette moyenne.
+• Une méthode qui affiche les données suivantes : nom, liste des notes, et moyenne des notes.
+Vous ferez une classe test qui testera la classe Etudiant et la méthode qui affiche les données de chaque étudiant.
+
+Voici un exemple d’édition à obtenir :
+nom étudiant : Martin
+notes universitaires : 11.0 13.0 18.0 7.0
+moyenne universitaire : 12.25
+nom étudiant : Dupont
+notes universitaires : 10.0 9.0 8.0 14.0
+moyenne universitaire : 10.25
+nom étudiant : Dupuis
+notes universitaires : 9.0 9.0 10.0 9.0
+moyenne universitaire : 9.25
+
+2) Il y a en fait deux types d’étudiants, ceux en formation initiale et les apprentis : (question à faire plus tard
+avec l’héritage)
+En plus de leurs notes universitaires (les 4 notes de la question 1),
+• les étudiants en formation initiale sont caractérisés par un taux d’absence. Ils sont déclarés admis si leur
+moyenne universitaire est >=10 et si leur taux d’absence est <10%.
+• Les apprentis sont dans une entreprise donnée par son nom et ont une note supplémentaire « note pratique ».
+Leur moyenne de l’année est la moyenne de la moyenne universitaire et de cette note pratique. Un apprenti est
+déclaré admis si sa moyenne de l’année est >=10.
+
+a) Créer deux classes « EtudiantInitial » et « Apprenti » héritant de la classe Etudiant.
+b) Pour chacune de ces deux classes vous :
+• définirez son constructeur
+• définirez une méthode résultatAnnée() qui retourne une chaîne « admis » ou « non admis » en
+fonction des résultats de l’étudiant.
+• redéfinirez la méthode affiche() qui fera appelle à la méthode affiche() de leur classe mère
+« Etudiant » en la complétant de façon à obtenir les éditions suivantes :
+
+Etudiant en formation initiale
+nom étudiant : Martin
+notes universitaires : 11.0 13.0 18.0 7.0
+moyenne universitaire : 12.25
+taux de présence : 95%
+résultat final: admis
+Etudiant en formation initiale
+nom étudiant : Dupont
+notes universitaires : 10.0 9.0 8.0 14.0
+moyenne universitaire : 10.25
+taux de présence : 85%
+résultat final: non admis
+Apprenti de l entreprise : EDF
+nom étudiant : Dupuis
+notes universitaires : 9.0 9.0 10.0 9.0
+moyenne universitaire : 9.25
+notepratique : 11.0
+moyenne Année : 10.125
+résultat final: admis
